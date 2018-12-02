@@ -55,7 +55,9 @@ app.get('/:shorturl',(req,res) => {
         res.status(400).send("Not a valid shortened url");
     }
 });
-
+app.use((req,res) => {
+  res.sendFile(__dirname + '/views/404.html');
+});
 app.listen(process.env.PORT,() => {
   console.log(`Server started at localhost:${process.env.PORT}`);
 });
