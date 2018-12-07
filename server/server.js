@@ -44,16 +44,32 @@ app.get('/new/*',(req,res) => {
     }
 });
 
-app.get('/:shorturl',(req,res) => {
-  if(!isNaN(req.params.shorturl)){
+app.get('/:shorturl', (req,res) => {
+
+  if(!isNaN(req.params.shorturl))
+  {
     let rnum = Number(req.params.shorturl);
-      url.findOne({rnum}).then((url) => {
+    url.findOne({rnum}).then( (url) => {
+      expiry_time = url._id.getTimestamp();
+      var oldDate = new Date(expiry_time);
+      var currentDate = new Date();
+      diff = currentDate - oldDate;      
+      if (Math.floor(diff/60e3) < 1) //here 1 is in mins So Expiry time here will be in minutes
+      {
         res.redirect(url.original_url);
-      }).catch((e) => res.status(404).send(e));
-    }
-    else{
-        res.status(400).send("Not a valid shortened url");
-    }
+      }
+      else
+      {
+        // res.sendFile(__dirname + '/views/index.html');
+        res.send('404 NOT FOUND');
+      }
+    })
+    .catch((e) => res.status(404).send(e));
+  }
+  else
+  {
+      res.status(400).send("Not a valid shortened url");
+  }
 });
 
 app.listen(process.env.PORT,() => {
