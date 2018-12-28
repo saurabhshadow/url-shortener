@@ -8,11 +8,8 @@ Follow this link to checkout this URL shortener API built using node.js and expr
 
 ### Prerequisites
 
-```
-1. node
-2. Download mongoDB community server (https://www.mongodb.com/download-center?jmp=nav#community)
-```
-
+> 1. node
+> 2. Download mongoDB community server - https://www.mongodb.com/download-center?jmp=nav#community]
 ### Local Setup
 1. From project root run `npm install`.
 2. Start mongoDB.
