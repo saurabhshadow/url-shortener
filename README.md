@@ -1,16 +1,20 @@
 # Welcome to URL-SHORTENER
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
+
 Follow this link to checkout this URL shortener API built using node.js and expressjs.
 [https://safe-crag-80479.herokuapp.com/](https://safe-crag-80479.herokuapp.com/)  
 (The link to this deployment is old)
 
-## Installation
+## Installation👨🏻‍💻
 
 ### Prerequisites
 
 > 1. node
 > 2. Download mongoDB community server - https://www.mongodb.com/download-center?jmp=nav#community]
-### Local Setup
+### Local Setup🔧
 1. From project root run `npm install`.
 2. Start mongoDB.
 3. Run `npm start` from project root.
@@ -25,9 +29,9 @@ Follow this link to checkout this URL shortener API built using node.js and expr
 
 - eg: `localhost:3000/new/https://google.co.in`
 
-### Want to contribute? 
+### Want to contribute?
 Read contribution guidelines for this project [here](.github/CONTRIBUTING.md)
 
 
-Made by [zamhaq](https://github.com/zamhaq)
+<p align="center">Made with ❤️ by [zamhaq](https://github.com/zamhaq)</p>
 -------------------
