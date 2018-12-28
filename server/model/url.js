@@ -12,7 +12,7 @@ const urlSchema = new mongoose.Schema({
   short_url: {
     type: String,
     trim: true
-  }
+  },
 });
 
 urlSchema.methods.toJSON = function(){
